@@ -1,0 +1,66 @@
+---
+---
+<div class="text-justify">
+    {{reference}}
+</div>
+
+{% if entry.abstract %}
+    <button class="btn btnId btnPub--abstract" id="b_{{key}}-abstract" style="outline:none;">Abstract</button>
+{% endif %}
+
+{% if entry.pages %}
+    <button class="btn btnId btnPub--BibTex" id="b_{{key}}-bibtex" style="outline:none;">BibTeX</button>
+{% endif %}
+
+{% if entry.doi %}
+    <span><a href="{{ entry.doi | prepend: 'http://doi.org/' }}">doi</a></span>
+{% elsif entry.url %}  
+    <span><a href="{{ entry.url }}">url</a></span>
+{% endif %}
+    
+{% if entry.eprinttype == 'arxiv' %}
+    <span style="margin-left:6px "><a href="{{ entry.eprint | prepend: 'http://arxiv.org/abs/' }}">arXiv</a></span>
+{% endif %} 
+    
+    
+{% if link %}
+    <a href="{{link}}"><button class="btn btnId btnPub--download" style="outline:none; position:relative;white-space: normal;">PDF</button></a>
+{% endif %}
+    
+{% if links['sup.pdf'] %}
+    <a href="{{links['sup.pdf']}}"><button class="btn btnId btnPub--supplement" style="outline:none; position:relative;white-space: normal;">Supplement</button></a>
+{% endif %}
+
+{% if entry.abstract %}   
+    <div class="dropDownAbstract" class="load" id="{{key}}-abstract">
+    {{ entry.abstract }}
+    </div>
+{% endif %}
+    
+{% if entry.pages %}    
+	<div class="dropDownBibtex" class="load" id="{{key}}-bibtex">
+    <pre>{{entry.bibtex}}</pre>
+    </div>
+{% endif %}   
+
+
+<div>
+    {% if entry.hal_id %}
+    <span><a href="{{ entry.hal_id | prepend: 'http://hal.inria.fr/' }}">hal</a></span>
+    {% endif %}
+</div>
+
+<div>
+    {% if entry.pdf %}
+    <span><a href="{{ entry.pdf }}">pdf</a></span>
+    {% endif %}
+</div>
+
+
+
+
+
+
+
+
+

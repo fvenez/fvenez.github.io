@@ -1,0 +1,20 @@
+# main links
+main:
+  - title: "Curriculum Vitae"
+    url:  /CV.html
+  - title: "Publications"
+    url:  /publications.html
+  - title: "Talks"
+    url: /talks.html
+  - title: "Teaching"
+    url: /teaching.html
+  - title: "Extras"
+    url: /extras.html
+  
+side_teaching:
+  - title: "Course archive"
+    url: /teaching.html
+  - title: "Learning"
+    url: /learning_maths.html
+  
+  

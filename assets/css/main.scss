@@ -1,0 +1,189 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+@charset "utf-8";
+
+
+
+/*
+   Breakpoints
+   ========================================================================== */
+
+$small: 768px !default;
+$medium: 900px !default;
+$medium-wide: 1024px !default;
+$large: 1280px !default;
+$x-large: 1900px !default;
+$max-width: $x-large !default;
+
+
+
+
+
+
+@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
+@import "minimal-mistakes"; // main partials
+
+/*
+GS: override any CSS with new CSS styles AFTER the `@import "minimal-mistakes";` line just above!
+See: https://github.com/mmistakes/minimal-mistakes/issues/1219#issuecomment-326809412
+Anything you place after this point will therefore "cascade and override" the previous CSS styles.
+*/
+
+
+
+
+
+
+
+
+
+/*
+GS: Decrease font sizes of the entire website.
+Defaults for small, medium, large, and x-large screens are:
+16, 18, 20, and 22px, in that order. All other font sizes are "em"
+[typography unit](https://en.wikipedia.org/wiki/Em_(typography)) multipliers of these pixel
+(px) values, and are therefore relative to and changed by these singular pixel values.
+See: https://github.com/mmistakes/minimal-mistakes/issues/1219#issuecomment-326809412
+- It looks like the screen pixel sizes to move into each new "size" category are defined in
+  the "Breakpoints" section of "_variables.scss"?
+*/
+
+html {
+  font-size: 14px; // change to whatever
+
+  @include breakpoint($small) {
+    font-size: 14px; // change to whatever
+  }
+
+  @include breakpoint($medium) {
+    font-size: 16px; // change to whatever
+  }
+
+  @include breakpoint($large) {
+    font-size: 18px; // change to whatever
+  }
+
+  @include breakpoint($x-large) {
+    font-size: 20px; // change to whatever
+  }
+}
+
+/* La barra laterale */
+
+.sidebar {
+  @include clearfix();
+  // @include breakpoint(max-width $large) {
+  //   /* fix z-index order of follow links */
+  //   position: relative;
+  //   z-index: 10;
+  //   -webkit-transform: translate3d(0, 0, 0);
+  //   transform: translate3d(0, 0, 0);
+  // }
+
+  @include breakpoint($large) {
+    float: left;
+    width: calc(#{$right-sidebar-width-narrow} - 1em); /* era - 1em, ho provato ad alzarlo a +1em per non far sporgere "Genova", ma questo causava un overflow nel blocco di testo a fianco, che veniva spostato sotto la sidebar. Il modo giusto di procedere sarebbe alzare il valore di $right-sidebar-width-narrow */
+    opacity: 1;
+    -webkit-transition: opacity 0.2s ease-in-out;
+    transition: opacity 0.2s ease-in-out;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    &.sticky {
+      overflow-y: auto;
+      /* calculate height of nav list
+         viewport height - nav height - masthead x-padding
+      */
+      max-height: calc(100vh - #{$nav-height} - 2em);
+    }
+  }
+
+  @include breakpoint($x-large) {
+    width: calc(#{$right-sidebar-width} - 1em);
+  }
+
+  > * {
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-bottom: 0;
+    font-family: $sans-serif-narrow;
+  }
+
+  p,
+  li {
+    font-family: $sans-serif;
+    font-size: $type-size-6;
+    line-height: 1.5;
+  }
+
+  img {
+    width: 100%;
+
+    &.emoji {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
+
+
+
+
+/* La foto nella barra laterale */
+
+
+.author__avatar {
+  display: table-cell;
+  vertical-align: top;
+  width: 36px;
+  height: 36px;
+
+  @include breakpoint($large) {
+    display: block;
+    width: auto;
+    height: auto;
+  }
+
+  img {
+    max-width: 110px;
+    border-radius: 20%;			/* era 50% */
+
+    @include breakpoint($large) {
+      padding: 5px;
+      border: 1px solid $border-color;
+    }
+  }
+}
+
+/* Bibliography */
+
+ol.bibliography {
+  counter-reset: item
+}
+
+ol.bibliography li {
+  list-style-type: none;
+  margin: 30px 0;
+}
+
+ol.bibliography li:before {
+  content:  counter(item) "."  ;    /*EDITED. WAS     content: counter(item)  ; */
+  counter-increment: item;
+  position: absolute;
+  text-align: right;
+  width: 4em;
+  margin-left: -6em;
+}
+
+
