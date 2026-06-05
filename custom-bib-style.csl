@@ -2,22 +2,16 @@
 <style xmlns="http://purl.org/net/xbiblio/csl" class="in-text" version="1.0" demote-non-dropping-particle="never" default-locale="en-US">
   <!-- This style was edited with the Visual CSL Editor (https://editor.citationstyles.org/visualEditor/) -->
   <info>
-    <title>prova di uno stile adatto</title>
-    <title-short>ACL</title-short>
-    <id>http://www.zotero.org/styles/prova-di-uno-stile-adatto</id>
-    <link href="http://www.zotero.org/styles/prova-di-uno-stile-adatto" rel="self"/>
-    <link href="http://www.aclweb.org/" rel="documentation"/>
+    <title>A custom bibliography style</title>
+    <title-short>Custom_fvenez</title-short>
     <author>
-      <name>Hajime Senuma</name>
-      <email>hajime.senuma@gmail.com</email>
-      <uri>https://github.com/hajimes</uri>
+      <name>Francesco Veneziano</name>
+      <uri>https://github.com/fvenez</uri>
     </author>
     <category citation-format="author-date"/>
-    <category field="engineering"/>
-    <category field="linguistics"/>
-    <summary>CSL for papers in ACL-related conference proceedings, e.g., ACL-HLT, EACL, NAACL-HTL, and EMNLP. (But NOT for the journal &quot;Computational Linguistics&quot;)</summary>
+    <summary>Meant to be used with Jekyll Scholar for a personal webpage</summary>
     <published>2013-11-20T21:00:00Z</published>
-    <updated>2021-05-05T21:44:21+00:00</updated>
+    <updated>2026-06-02T17:00:00+01:00</updated>
     <rights license="http://creativecommons.org/licenses/by-sa/3.0/">This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 License</rights>
   </info>
   <macro name="author">
@@ -171,30 +165,22 @@
       <key variable="title"/>
     </sort>
     <layout>
-      <date variable="issued" prefix=" " suffix=".">
+      <date date-parts="year-month" variable="issued" prefix=" " suffix=".">
         <date-part name="month" suffix=" "/>
         <date-part name="year"/>
       </date>
-      <text variable="title" prefix=" " suffix=". "/>
-      <choose>
-        <if type="book">
-          <text macro="author-or-editor" suffix="."/>
-        </if>
-        <else>
-          <text macro="author" suffix="."/>
-        </else>
-      </choose>
       <choose>
         <if type="article-journal">
+          <text variable="title" prefix=" " suffix="."/>
           <group prefix=" " suffix=".">
             <text variable="container-title" font-style="italic"/>
             <text variable="volume" prefix=", "/>
             <text variable="issue" prefix="(" suffix=")"/>
-            <text variable="page" prefix=":"/>
-            <text macro="month" prefix=", "/>
+            <text variable="page" prefix=": "/>
           </group>
         </if>
         <else-if type="book">
+          <text variable="title" prefix=" " suffix="." font-style="italic"/>
           <group delimiter=", " suffix=".">
             <text macro="volume-and-collection-title"/>
           </group>
@@ -202,10 +188,10 @@
             <text variable="publisher"/>
             <text variable="publisher-place"/>
             <text macro="edition"/>
-            <text macro="month"/>
           </group>
         </else-if>
         <else-if type="chapter">
+          <text variable="title" prefix=" " suffix="."/>
           <text term="in" text-case="capitalize-first" prefix=" " suffix=" "/>
           <group delimiter=", " suffix=".">
             <text macro="editor"/>
@@ -224,16 +210,17 @@
             <text variable="publisher"/>
             <text variable="publisher-place"/>
             <text macro="edition"/>
-            <text macro="month"/>
           </group>
         </else-if>
         <else-if type="pamphlet">
+          <text variable="title" prefix=" " suffix="."/>
           <group delimiter=", " prefix=" " suffix=".">
             <text variable="publisher-place"/>
             <text macro="month"/>
           </group>
         </else-if>
         <else-if type="paper-conference">
+          <text variable="title" prefix=" " suffix=". "/>
           <text term="in" text-case="capitalize-first" suffix=" "/>
           <group suffix="." delimiter=", ">
             <text macro="editor"/>
@@ -246,7 +233,6 @@
             <choose>
               <if variable="event-place publisher-place" match="any">
                 <text macro="event-or-publisher-place"/>
-                <text macro="month"/>
               </if>
             </choose>
           </group>
@@ -260,6 +246,7 @@
           </group>
         </else-if>
         <else-if type="report">
+          <text variable="title" prefix=" " suffix="."/>
           <group delimiter=", " prefix=" " suffix=".">
             <text macro="technical-report"/>
             <text variable="publisher"/>
@@ -268,15 +255,31 @@
           </group>
         </else-if>
         <else-if type="thesis">
+          <text variable="title" prefix=" " suffix="." font-style="italic"/>
           <group delimiter=", " prefix=" " suffix=".">
             <text macro="thesis-type"/>
             <text variable="publisher"/>
             <text variable="publisher-place"/>
-            <text macro="month"/>
           </group>
         </else-if>
+    <!-- ===================== -->
+    <!-- MISC (talks) -->
+    <!-- /title/, notes. -->
+    <!-- ===================== -->
+        <else-if type="misc">
+          <text variable="title" prefix=" " font-style="italic" suffix=", "/>
+        </else-if>
+
         <else>
-          <text macro="month" prefix=" " suffix="."/>
+          <text variable="title" prefix=" " suffix="."/>
+        </else>
+      </choose>
+      <choose>
+        <if type="book">
+          <text macro="author-or-editor" suffix="."/>
+        </if>
+        <else>
+          <text macro="author" prefix=" " suffix="."/>
         </else>
       </choose>
       <text variable="note" prefix=" " suffix="."/>

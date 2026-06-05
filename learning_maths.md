@@ -4,7 +4,7 @@ title: Learning mathematics
 sidebar:
   nav: "side_teaching"
 ---
-[![Work in progress](./assets/images/saint_curious_george.png){: style="float: right; width: 25%;"}](https://abstrusegoose.com/353)
+[![Work in progress](./assets/images/saint_curious_george.png){: style="float: right; width: 25%;"}](https://github.com/s-macke/Abstruse-Goose-Archive/blob/master/comics/353.md)
 <figure>
   <blockquote>
     It’s been said before and often, but it cannot be overemphasized: study actively. Don't just read it; fight it! Ask your own questions, look for your own examples, discover your own proofs. Is the hypothesis necessary? Is the converse true? What happens in the classical special case? What about the degenerate cases? Where does the proof use the hypothesis?
@@ -37,10 +37,12 @@ sidebar:
 
 Some [common pitfalls](https://www.jmilne.org/math/words.html) when writing mathematics, by J. S. Milne
 
+
+<!--
 ### LaTeX (and friends)
 
 ## Galois Theory
 
 ## Linear Algebra
-
+-->
 ![Work in progress](./assets/images/under_construction.png)

@@ -50,6 +50,7 @@ reCaptcha:
   siteKey                :
   secret                 :
 atom_feed:
+  hide                   : true
   path                   : # blank (default) uses feed.xml
 search                   : # true, false (default)
 search_full_content      : # true, false (default)
@@ -115,9 +116,15 @@ author:
     - label: "Facebook"
       icon: "fab fa-fw fa-facebook-square"
       # url: "https://facebook.com/"
+    - label: "ORCID"
+      icon: "ai ai-orcid"
+      url: "https://orcid.org/0000-0002-2225-7769"
+    - label: "arXiv"
+      icon: "ai ai-arxiv"
+      url: "https://arxiv.org/a/veneziano_f_1.html"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      # url: "https://github.com/"
+      #url: "https://github.com/fvenez/"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       # url: "https://instagram.com/"
@@ -298,19 +305,28 @@ defaults:
 #            nav: "sbar"
 
 scholar:
-  style: association-for-computational-linguistics-variante
+  style: custom-bib-style
   locale: en
-  
-  
+  allow_locale_overrides: true
+
   sort_by: year, month
   order: descending
 
   group_by: none
   group_order: ascending
 
+  bibliography_list_attributes:
+    reversed: "reversed"
+
+  bibtex_filters: pandoc
+#  raw_bibtex_filters:
+#  use_raw_bibtex_entry: true
+
   source: ./_bibliography
-  bibliography: MyPapers.bib
+  bibliography: MyPapers-web.bib
   bibliography_template: bib
+
+  repository: ./assets/slides
 
   replace_strings: true
   join_strings:    true

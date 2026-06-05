@@ -27,6 +27,10 @@
     <a href="{{link}}"><button class="btn btnId btnPub--download" style="outline:none; position:relative;white-space: normal;">PDF</button></a>
 {% endif %}
     
+ {% if links['slides.pdf'] %}
+    <a href="{{links['slides.pdf']}}"><button class="btn btnId btnPub--slides" style="outline:none; position:relative;white-space: normal;">Slides</button></a>
+{% endif %}
+
 {% if links['sup.pdf'] %}
     <a href="{{links['sup.pdf']}}"><button class="btn btnId btnPub--supplement" style="outline:none; position:relative;white-space: normal;">Supplement</button></a>
 {% endif %}

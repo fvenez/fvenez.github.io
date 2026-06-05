@@ -1,3 +1,6 @@
+
+#Questo file serviva per gestire il LaTeX negli abstract degli articoli e dei seminari, ma non gestiva bene le parentesi graffe e l'ho sostituito con un sistema che chiama pandoc esternamente
+
  
 require 'latex/decode'
 

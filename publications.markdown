@@ -18,10 +18,6 @@ header:
 
 {% bibliography -q @inproceedings %}
 
-## Theses
-
-{% bibliography -q @thesis %}
-
 ## Preprints
 
 {% bibliography -q @online %}

@@ -5,8 +5,5 @@ classes: wide
 --- 
 
 
-{% bibliography --file MyTalks  %}
+{% bibliography --file MyTalks-web  %}
 
-
-
-![Work in progress](./assets/images/under_construction.png)
