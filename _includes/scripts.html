@@ -51,12 +51,23 @@
 
 
 
-
-
-
-
-
 <!-- AJax for DropDown Effect of Abstract and BibTex -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll(".btnId").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var id = btn.id.split("_")[1];
+      var el = document.getElementById(id);
+      if (el) el.style.display = (el.style.display === "none" || !el.style.display) ? "block" : "none";
+    });
+  });
+});
+</script>
+
+
+
+
+<!-- Old version
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script>
 $(document).ready(function(){
@@ -70,5 +81,5 @@ $(document).ready(function(){
     });
 });
 </script>
-
+ -->
 
