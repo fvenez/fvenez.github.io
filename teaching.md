@@ -1,6 +1,6 @@
 ---
 layout: single
-title: Teaching
+title: Course archive
 toc: true 
 sidebar:
   nav: "side_teaching"
@@ -13,7 +13,6 @@ Informazioni pratiche e materiale didattico di ogni corso si trovano sulle rispe
 
 * [Geometria - 80103](https://2025.aulaweb.unige.it/course/view.php?id=1038) (I sem.)
 * [Teoria degli schemi - 109051](https://2025.aulaweb.unige.it/course/view.php?id=2905) (II sem.)
-
 
 ### 2024–2025 ###
 
@@ -76,6 +75,7 @@ Einfürung in die diophantische Approximation
 * Seminarkurs Zahlentheorie (Frühjahrsemester)
 
 ---------------------------
+
 ### TU Darmstadt: ###
 
 #### Wintersemester 2014–15 ####

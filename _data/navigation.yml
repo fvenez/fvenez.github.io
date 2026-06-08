@@ -8,6 +8,8 @@ main:
     url: /talks.html
   - title: "Teaching"
     url: /teaching.html
+  - title: "Projects"
+    url: /ZeusAI.html
   - title: "Extras"
     url: /extras.html
   
