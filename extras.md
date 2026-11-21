@@ -3,7 +3,8 @@ layout: single
 title: Extras
 header:
   image: /assets/images/9dragons_2560px.png
-
+sidebar:
+  nav: "side_extras"
 ---
 ## Blogs
 
@@ -45,7 +46,7 @@ header:
 
 
 
-## AI, mathematics and the coming singularity
+## AI and mathematics ##
 Starting from mid-2026, advances in the field of AI have profoundly shaken the mathematical community and (at the very least) changed forever the practice of mathematical research.
 I do not think that this should be, at this moment, anybody’s *primary* concern: we seem to be at a crucial juncture of humanity’s history, and the upcoming changes to society as a whole will impact everybody, *mathematicians included*, much more than whatever change AI might force upon our profession. Nevertheless we mathematicians care deeply about mathematics and the past months have brought a resurgence of blogging activity and many philosophical reflections on the nature of mathematics as an endeavour, both for individual mathematicians and for mankind.
 
@@ -73,22 +74,6 @@ I do not think that this should be, at this moment, anybody’s *primary* concer
 
 [The Future of Mathematics](https://terrytao.wordpress.com/2026/10/05/the-future-of-mathematics/), by Jeremy Avigad. (2026-10-05)
 
-
-### Recommended readings from writers of science fiction ###
-
-[The Book of the Machines](./assets/texts/Butler - The Book of the Machines.pdf), by Samuel Butler. (1872)
-
-[The Last Evolution](https://www.gutenberg.org/files/27462/27462-h/27462-h.htm), by John W. Campbell Jr. (1932)
-
-[First Word](./assets/texts/Vinge - First Word.pdf), by Vernor Vinge. (1983)
-
-[The Coming Technological Singularity: How to Survive in the Post-Human Era](./assets/texts/Vinge - How to survive the Singularity.pdf), by Vernor Vinge. (1983)
-
-[Catching crumbs from the table](https://www.nature.com/articles/35014679), by Ted Chiang. (2000)
-
-[Accelerando](https://www.antipope.org/charlie/blog-static/fiction/accelerando/accelerando.html), by Charles Stross. (2005)
-
-[No, artificial intelligence is not conscious](https://www.theatlantic.com/philosophy/2026/06/no-artificial-intelligence-is-not-conscious/687378/), by Ted Chiang. (2026-06-03)
 
 
 

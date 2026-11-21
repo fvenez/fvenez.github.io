@@ -19,4 +19,8 @@ side_teaching:
   - title: "Learning"
     url: /learning_maths.html
   
-  
+side_extras:
+  - title: "Extras"
+    url: /extras.html
+  - title: "AI and the Singularity"
+    url: /singularity.html
