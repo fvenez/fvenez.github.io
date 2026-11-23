@@ -1,6 +1,6 @@
 ---
 layout: single
-title: AI and the coming technological Singularity
+title: Science fiction and the coming technological Singularity
 sidebar:
   nav: "side_extras"
 ---

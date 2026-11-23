@@ -22,5 +22,7 @@ side_teaching:
 side_extras:
   - title: "Extras"
     url: /extras.html
-  - title: "AI and the Singularity"
+  - title: "Maths 2.0"
+    url: /maths_2.0.html
+  - title: "Science fiction and the Singularity"
     url: /singularity.html
